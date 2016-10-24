@@ -1,7 +1,4 @@
-# gdg2UUlm
-### Basics of Design Project, Ulm University
-
-The second course *basics of design* conveys the principles of size, shape, position and color extended to moving pictures. 
+# Petterizer
 
 ----
 
