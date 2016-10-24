@@ -1,0 +1,228 @@
+//colors
+$color_fuscous_gray_approx: rgba(85, 85, 85, 1);
+$white: rgba(251, 251, 251, 1);
+$black: rgba(0, 0, 0, 1);
+$color_woodsmoke_approx: rgba(13, 13, 13, 1);
+$color_astral_approx: rgba(48, 113, 169, 1);
+$color_black_approx: rgba(1, 1, 1, 1);
+$color_steel_blue_approx: rgba(54, 126, 189, 1);
+$color_st_tropaz_approx: rgba(42, 100, 149, 1);
+$color_mountain_mist_approx: rgba(153, 153, 153, 1);
+$color_pelorous_approx: rgba(52, 167, 193, 1);
+$color_gallery_approx: rgba(238, 238, 238, 1);
+
+//fonts
+$font-fam: OpenSans, Helvetica, sans-serif;
+
+@mixin prefix($prop, $val) {
+    @each $prefix in '-webkit-', '-moz-', '-ms-', '-o-', '' {
+        #{$prefix}#{$prop}: $val;
+    }
+}
+
+@font-face { 
+    font-family: "OpenSans";
+    src: url("../data/OpenSans-Regular.ttf");
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: $color_fuscous_gray_approx;
+    color: $white;
+    font-family: $font-fam;
+    height: 100%;
+    padding: 0;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        color: $white;
+        margin: 0.23em 2%;
+    }
+}
+
+#content {
+    margin: 0;
+    display: flex;
+    
+    /* This centers our sketch horizontally. */
+    justify-content: center;
+    /* This centers our sketch vertically. */
+    align-items: center;
+}
+
+canvas {
+    border: $white solid 2px;
+    display: inline-block;
+    padding: 10px;
+}
+
+.gui {
+    display: inline-block;
+    border: $white solid 2px;
+    margin: 0 10px 0 0;
+    padding: 10px;
+    overflow: hidden;
+
+    .guicanvas {
+        width: 400px;
+        height: 720px;
+        display: block;
+        background-color: $color_woodsmoke_approx;
+        padding: 2px 0;
+    }
+}
+
+.control {
+    width: 96%;
+    padding: 2%;
+    white-space: nowrap;
+    
+    label {
+        width: 23%;
+        display: inline-block;
+
+        &.onoff {
+            width: 100%;
+            height: 60px;
+            overflow: hidden;
+            border: 1px solid $white;
+        }
+    }
+    
+    input {
+        width: 47.5%;
+        margin: 1%;
+        font-family: $font-fam;
+        
+        &[type=text] {
+            width: 20%;
+            text-align: center;
+            background-color: $color_woodsmoke_approx;
+            color: $white; 
+            font-weight: 600; 
+            border: 1px solid $white;
+            float: right;
+        }    
+    
+        &[type=range] {
+        
+            -webkit-appearance: none;
+
+            &:focus {
+                outline: none;
+            }
+
+            // webkit
+            &::-webkit-slider-runnable-track {
+                width: 100%;
+                height: 22px;
+                cursor: pointer;
+                animate: 0.2s;
+                background-color: $color_woodsmoke_approx;
+                border: 1px solid $white;
+            }
+
+            &::-webkit-slider-thumb {
+                border: 1px solid $white;
+                height: 100%;
+                width: 10px;
+                background: $black;
+                cursor: pointer;
+                -webkit-appearance: none;
+            }
+        }
+        
+        &[type=checkbox] {
+            @include prefix(user-select, none);
+            display: none;
+            
+            &:checked + label {
+                .onoff-fill {
+                    margin-left: 0;
+                }
+            }
+        }
+        
+        &[type=button] {
+            text-align: center;
+            background-color: $color_woodsmoke_approx;
+            color: $white; 
+            font-weight: 600; 
+            border: 1px solid $white;
+        }
+    }
+
+    .onoff-fill {
+        display: block;
+        width: 200%;
+        margin-left: -100%;
+        @include prefix(transition, margin 0.3s ease-in 0s);
+        
+        &:before, &:after {
+            display: block;
+            float: left;
+            width: 50%;
+            height: 60px;
+            overflow: auto;
+            padding: 0;
+            box-sizing: border-box;
+            color: $white;
+        }
+        
+        &:before {
+            content: "Outline";
+            padding-left: 10px;
+            background-color: $color_woodsmoke_approx;
+            text-align: left;
+        }
+        
+        &:after {
+            content: "Inline";
+            padding-right: 10px;
+            background-color: $color_woodsmoke_approx;
+            text-align: right;
+        }
+    }
+    
+    #offsetOnOff {
+        + label {
+            .onoff-fill:before {
+                content: "Offset";
+            }
+            .onoff-fill:after {
+                content: "No Offset";
+            }
+        }
+    }
+
+}
+
+    .onoffswitch-switch {
+        display: block;
+        width: 18px;
+        margin: 6px;
+        background: $black;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 56px;
+        border: 2px solid $color_mountain_mist_approx;
+        border-radius: 20px;
+        @include prefix(transition, all 0.3s ease-in 0s);
+    }
+
+    .onoffswitch-checkbox:checked + .onoffswitch-label {
+    .onoffswitch-inner {
+        margin-left: 0;
+    }
+    
+    .onoffswitch-switch {
+        right: 0px;
+    }
+    
+    
+}

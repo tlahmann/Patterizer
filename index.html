@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Patterizer</title>
+    
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="script/Gui.js"></script>
+    <script language="javascript" type="text/javascript" src="script/PShape.js"></script>
+    <script language="javascript" type="text/javascript" src="script/Patterizer.js"></script>
+    
+    <link rel="stylesheet" href="style/style.css">
+    
+    <!-- Live reload -->
+    <script src="http://localhost:35729/livereload.js"></script>
+  </head>
+  <body>
+    <h1>Patterizer</h1>
+    <div id="content">
+      <div class="gui">
+        <div class="guicanvas">
+          <h2>Objects</h2>
+          <div class="control">
+            <input type="checkbox" id="outlineOnOff" onchange="changeOutline(this.checked)">
+            <label class="onoff" for="outlineOnOff">
+              <span class="onoff-fill"></span>
+            </label>
+          </div>
+          
+          <h2>Apperance</h2>
+          <div class="control">
+            <label for="radius" >Radius</label>
+            <input id="radiusR" type="range" min="5" value ="50" max="100" step="1" oninput="changeRadius(this.value)"/>
+            <input id="radius" type="text" value ="50" onchange="changeRadius(this.value)"/>
+          </div>
+          <div class="control">
+            <label for="rotation" >Rotation</label>
+            <input id="rotationR" type="range" min="0" value ="0" max="360" step="1" oninput="changeRotation(this.value)"/>
+            <input id="rotation" type="text" value ="0" onchange="changeRotation(this.value)"/>
+          </div>
+          <div class="control">
+            <label for="originX" >OriginX</label>
+            <input id="originXR" type="range" min="0" value ="0" max="1024" step="10" oninput="changeOriginX(this.value)"/>
+            <input id="originX" type="text" value ="0" onchange="changeOriginX(this.value)"/>
+          </div>
+          <div class="control">
+            <label for="originY" >OriginY</label>
+            <input id="originYR" type="range" min="0" value ="0" max="720" step="10" oninput="changeOriginY(this.value)"/>
+            <input id="originY" type="text" value ="0" onchange="changeOriginY(this.value)"/>
+          </div>
+          <div class="control">
+            <label for="distanceX" >DistanceX</label>
+            <input id="distanceXR" type="range" min="10" value ="100" max="1024" step="10" oninput="changeDistanceX(this.value)"/>
+            <input id="distanceX" type="text" value ="100" onchange="changeDistanceX(this.value)"/>
+          </div>
+          <div class="control">
+            <label for="distanceY" >DistanceY</label>
+            <input id="distanceYR" type="range" min="10" value ="100" max="720" step="10" oninput="changeDistanceY(this.value)"/>
+            <input id="distanceY" type="text" value ="100" onchange="changeDistanceY(this.value)"/>
+          </div>
+          <div class="control">
+            <label for="thickness" >Thickness</label>
+            <input id="thicknessR" type="range" min="1" value ="1" max="10" step="1" oninput="changeThickness(this.value)"/>
+            <input id="thickness" type="text" value ="1" onchange="changeThickness(this.value)"/>
+          </div>
+          <div class="control">
+            <label for="elements" >Elements</label>
+            <input id="elementsR" type="range" min="1" value ="4" max="10" step="1" oninput="changeNumberOfElements(this.value)"/>
+            <input id="elements" type="text" value ="4" onchange="changeNumberOfElements(this.value)"/>
+          </div>
+          
+          <div class="control">
+            <input type="checkbox" id="offsetOnOff" onchange="changeOffset(this.checked)">
+            <label class="onoff" for="offsetOnOff">
+              <span class="onoff-fill"></span>
+            </label>
+          </div>
+          
+          <div class="control">
+            <input id="reset" type="button" value ="Reset" onclick="reset()"/>
+            <input id="screenshot" type="button" value ="Screenshot"  onclick="screenshot()"/>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>

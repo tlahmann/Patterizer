@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "OpenSans";
+  src: url("../data/OpenSans-Regular.ttf");
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #555555;
+  color: #fbfbfb;
+  font-family: OpenSans, Helvetica, sans-serif;
+  height: 100%;
+  padding: 0;
+}
+
+h1 {
+  color: #fbfbfb;
+  margin: 0.23em 2%;
+}
+
+h2 {
+  color: #fbfbfb;
+  margin: 0.23em 2%;
+}
+
+h3 {
+  color: #fbfbfb;
+  margin: 0.23em 2%;
+}
+
+h4 {
+  color: #fbfbfb;
+  margin: 0.23em 2%;
+}
+
+h5 {
+  color: #fbfbfb;
+  margin: 0.23em 2%;
+}
+
+h6 {
+  color: #fbfbfb;
+  margin: 0.23em 2%;
+}
+
+#content {
+  margin: 0;
+  display: flex;
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+  /* This centers our sketch vertically. */
+  align-items: center;
+}
+
+canvas {
+  border: #fbfbfb solid 2px;
+  display: inline-block;
+  padding: 10px;
+}
+
+.gui {
+  display: inline-block;
+  border: #fbfbfb solid 2px;
+  margin: 0 10px 0 0;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.gui .guicanvas {
+  width: 400px;
+  height: 720px;
+  display: block;
+  background-color: #0d0d0d;
+  padding: 2px 0;
+}
+
+.control {
+  width: 96%;
+  padding: 2%;
+  white-space: nowrap;
+}
+
+.control label {
+  width: 23%;
+  display: inline-block;
+}
+
+.control label.onoff {
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  border: 1px solid #fbfbfb;
+}
+
+.control input {
+  width: 47.5%;
+  margin: 1%;
+  font-family: OpenSans, Helvetica, sans-serif;
+}
+
+.control input[type=text] {
+  width: 20%;
+  text-align: center;
+  background-color: #0d0d0d;
+  color: #fbfbfb;
+  font-weight: 600;
+  border: 1px solid #fbfbfb;
+  float: right;
+}
+
+.control input[type=range] {
+  -webkit-appearance: none;
+}
+
+.control input[type=range]:focus {
+  outline: none;
+}
+
+.control input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 22px;
+  cursor: pointer;
+  animate: 0.2s;
+  background-color: #0d0d0d;
+  border: 1px solid #fbfbfb;
+}
+
+.control input[type=range]::-webkit-slider-thumb {
+  border: 1px solid #fbfbfb;
+  height: 100%;
+  width: 10px;
+  background: black;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.control input[type=checkbox] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  display: none;
+}
+
+.control input[type=checkbox]:checked + label .onoff-fill {
+  margin-left: 0;
+}
+
+.control input[type=button] {
+  text-align: center;
+  background-color: #0d0d0d;
+  color: #fbfbfb;
+  font-weight: 600;
+  border: 1px solid #fbfbfb;
+}
+
+.control .onoff-fill {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -ms-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.control .onoff-fill:before, .control .onoff-fill:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 60px;
+  overflow: auto;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fbfbfb;
+}
+
+.control .onoff-fill:before {
+  content: "Outline";
+  padding-left: 10px;
+  background-color: #0d0d0d;
+  text-align: left;
+}
+
+.control .onoff-fill:after {
+  content: "Inline";
+  padding-right: 10px;
+  background-color: #0d0d0d;
+  text-align: right;
+}
+
+.control #offsetOnOff + label .onoff-fill:before {
+  content: "Offset";
+}
+
+.control #offsetOnOff + label .onoff-fill:after {
+  content: "No Offset";
+}
+
+.onoffswitch-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -moz-transition: all 0.3s ease-in 0s;
+  -ms-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */
