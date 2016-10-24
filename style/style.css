@@ -1,0 +1,27 @@
+body {
+    background-color: #555;
+    position: relative;
+    margin: auto;
+    width: 1490px;
+    height: 740px;
+}
+
+canvas {
+    display: inline-block;
+    border: #fff solid 2px;
+    padding: 10px;
+}
+
+.gui {
+    display: inline-block;
+    border: #fff solid 2px;
+    margin: 0 10px 0 0;
+    padding: 10px;
+}
+
+.guicanvas {
+    width: 400px;
+    height: 720px;
+    display: block;
+    background-color: #000;
+}
