@@ -18,8 +18,14 @@
 
     <div class="gui">
       <div class="guicanvas">
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" onchange="changeOutline(this)">
+          <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+          </label>
+        </div>
         <input type="range" min="5" value ="50" max="100" step="1" oninput="changeRadius(this)"/>
-        <input type="range" min="0" value ="0" max="10" step="1" oninput="changeRadiusChange(this)"/>
         <input type="range" min="0" value ="0" max="360" step="1" oninput="changeRotation(this)"/>
         <input type="range" min="0" value ="0" max="1024" step="10" oninput="changeOriginX(this)"/>
         <input type="range" min="0" value ="0" max="720" step="10" oninput="changeOriginY(this)"/>

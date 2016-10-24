@@ -1,5 +1,4 @@
 var radius = 50;
-var radiusChange = 0;
 var rotation = 0;
 var originX = 0;
 var originY = 0;
@@ -12,13 +11,13 @@ var numberOfElements = 4;
 
 var outline = false;
 
-function changeRadius(ev) {
-    radius = parseInt(ev.value);
+function changeOutline(ev) {
+    outline = ev.checked;
     draw();
 }
 
-function changeRadiusChange(ev) {
-    radiusChange = parseInt(ev.value);
+function changeRadius(ev) {
+    radius = parseInt(ev.value);
     draw();
 }
 
