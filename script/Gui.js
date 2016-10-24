@@ -11,47 +11,60 @@ var numberOfElements = 4;
 
 var outline = false;
 
-function changeOutline(ev) {
-    outline = ev.checked;
+function changeOffset(val) {
+    offset = val;
     draw();
 }
 
-function changeRadius(ev) {
-    radius = parseInt(ev.value);
+function changeOutline(val) {
+    outline = val;
     draw();
 }
 
-function changeRotation(ev) {
-    rotation = parseInt(ev.value);
+function changeRadius(val) {
+    radius = parseInt(val);
+    document.getElementById('radius').value = val;
     draw();
 }
 
-function changeOriginX(ev) {
-    originX = parseInt(ev.value);
+function changeRotation(val) {
+    rotation = parseInt(val);
+    document.getElementById('rotation').value = val;
     draw();
 }
 
-function changeOriginY(ev) {
-    originY = parseInt(ev.value);
+function changeOriginX(val) {
+    originX = parseInt(val);
+    document.getElementById('originX').value = val;
     draw();
 }
 
-function changeDistanceX(ev) {
-    distanceX = parseInt(ev.value);
+function changeOriginY(val) {
+    originY = parseInt(val);
+    document.getElementById('originY').value = val;
     draw();
 }
 
-function changeDistanceY(ev) {
-    distanceY = parseInt(ev.value);
+function changeDistanceX(val) {
+    distanceX = parseInt(val);
+    document.getElementById('distanceX').value = val;
     draw();
 }
 
-function changeThickness(ev) {
-    thickness = parseInt(ev.value);
+function changeDistanceY(val) {
+    distanceY = parseInt(val);
+    document.getElementById('distanceY').value = val;
     draw();
 }
 
-function changeNumberOfElements(ev) {
-    numberOfElements = parseInt(ev.value);
+function changeThickness(val) {
+    thickness = parseInt(val);
+    document.getElementById('thickness').value = val;
+    draw();
+}
+
+function changeNumberOfElements(val) {
+    numberOfElements = parseInt(val);
+    document.getElementById('elements').value = val;
     draw();
 }
