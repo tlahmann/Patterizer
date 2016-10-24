@@ -1,0 +1,15 @@
+{
+  "name": "Patterizer",
+  "version": "2.0.0",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tlahmann/Patterizer.git"
+  },
+  "private": false,
+  "license": "MIT"
+}
