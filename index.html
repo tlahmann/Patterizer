@@ -18,7 +18,15 @@
 
     <div class="gui">
       <div class="guicanvas">
-
+        <input type="range" min="5" value ="50" max="100" step="1" oninput="changeRadius(this)"/>
+        <input type="range" min="0" value ="0" max="10" step="1" oninput="changeRadiusChange(this)"/>
+        <input type="range" min="0" value ="0" max="360" step="1" oninput="changeRotation(this)"/>
+        <input type="range" min="0" value ="0" max="1024" step="10" oninput="changeOriginX(this)"/>
+        <input type="range" min="0" value ="0" max="720" step="10" oninput="changeOriginY(this)"/>
+        <input type="range" min="10" value ="100" max="1024" step="10" oninput="changeDistanceX(this)"/>
+        <input type="range" min="10" value ="100" max="720" step="10" oninput="changeDistanceY(this)"/>
+        <input type="range" min="1" value ="1" max="10" step="1" oninput="changeThickness(this)"/>
+        <input type="range" min="1" value ="4" max="10" step="1" oninput="changeNumberOfElements(this)"/>
       </div>
     </div>
   </body>

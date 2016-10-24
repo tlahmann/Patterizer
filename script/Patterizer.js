@@ -3,22 +3,21 @@ var elements;
 function setup() {
     createCanvas(1024, 720);
     noLoop();
-    init();
 }
 
 function init() {
     elements = [];
     var evodd = true;
     var l = 0, i = 0, j = 0;
-    for (j = originY.y; j < height + 100; j += distanceY.y, l++) {
-        var k = (evodd = !evodd) && offset ? distanceX.y / 2 : 0;
-        for (i = originX.y; i < width + 100; i += distanceX.y) {
+    for (j = originY; j < height + 100; j += distanceY, l++) {
+        var k = (evodd = !evodd) && offset ? distanceX / 2 : 0;
+        for (i = originX; i < width + 100; i += distanceX) {
             var pos = [i + k, j];
             elements.push(new PShape(this, 
                                        pos,
-                                       radius.y * ((radiusChange.z - l * radiusChange.y) / radiusChange.z),
-                                       rotation.y, 
-                                       numberOfElements.y));
+                                       radius,
+                                       rotation, 
+                                       numberOfElements));
         }
     }
 }
@@ -28,6 +27,8 @@ function settings() {
 }
 
 function draw() {
+    init();
+    
     background(color(0, 0, 0, 255));
 
     var i;

@@ -1,13 +1,58 @@
-var radius = new p5.Vector(5, 50, 1000);
-var radiusChange = new p5.Vector(0, 0, 10);
-var rotation = new p5.Vector(0, 0, 360);
-var originX = new p5.Vector(0, 0, 1024);
-var originY = new p5.Vector(0, 0, 720);
-var distanceX = new p5.Vector(10, 100, 1024);
-var distanceY = new p5.Vector(10, 100, 720);
+var radius = 50;
+var radiusChange = 0;
+var rotation = 0;
+var originX = 0;
+var originY = 0;
+var distanceX = 100;
+var distanceY = 100;
 var offset = false;
 
-var thickness = new p5.Vector(1, 1, 10);
-var numberOfElements = new p5.Vector(1, 4, 50);
+var thickness = 1;
+var numberOfElements = 4;
 
-var outline = true;
+var outline = false;
+
+function changeRadius(ev) {
+    radius = parseInt(ev.value);
+    draw();
+}
+
+function changeRadiusChange(ev) {
+    radiusChange = parseInt(ev.value);
+    draw();
+}
+
+function changeRotation(ev) {
+    rotation = parseInt(ev.value);
+    draw();
+}
+
+function changeOriginX(ev) {
+    originX = parseInt(ev.value);
+    draw();
+}
+
+function changeOriginY(ev) {
+    originY = parseInt(ev.value);
+    draw();
+}
+
+function changeDistanceX(ev) {
+    distanceX = parseInt(ev.value);
+    draw();
+}
+
+function changeDistanceY(ev) {
+    distanceY = parseInt(ev.value);
+    draw();
+}
+
+function changeThickness(ev) {
+    thickness = parseInt(ev.value);
+    draw();
+}
+
+function changeNumberOfElements(ev) {
+    numberOfElements = parseInt(ev.value);
+    draw();
+}
