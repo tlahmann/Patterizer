@@ -37,4 +37,7 @@ module.exports = function(grunt) {
     
     // tasks
     grunt.registerTask('default', ['sass:dist', 'watch']);
+    
+    // Travis CI task.
+    grunt.registerTask('travis', 'sass:dist');
 };
