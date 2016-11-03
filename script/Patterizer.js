@@ -26,7 +26,7 @@ function init() {
 function draw() {
     init();
     
-    background(color(0, 0, 0, 255));
+    background(colorBackground);
 
     var i;
     for (i = 0; i < elements.length; i++) {

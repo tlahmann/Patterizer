@@ -11,13 +11,23 @@ var numberOfElements = 4;
 
 var outline = false;
 
-function changeOffset(val) {
+var colorBackground = 'rgba(0, 0, 0, 255)';
+var colorForeground = 'rgba(255, 255, 255, 255)';
+
+function toggleOffset(val) {
     offset = val;
     draw();
 }
 
-function changeOutline(val) {
+function toggleOutline(val) {
     outline = val;
+    draw();
+}
+
+function toggleColor() {
+    var tmp = colorBackground;
+    colorBackground = colorForeground;
+    colorForeground = tmp;
     draw();
 }
 

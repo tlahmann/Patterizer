@@ -15,7 +15,7 @@ var PShape = class PShape {
     }
 
     display() {
-        this.parent.stroke(color(255, 255, 255, 255));
+        this.parent.stroke(colorForeground);
         this.parent.strokeWeight(thickness);
         if (!outline) {
             this.parent.strokeCap(SQUARE);

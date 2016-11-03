@@ -23,7 +23,7 @@
         <div class="guicanvas">
           <h2>Objects</h2>
           <div class="control">
-            <input type="checkbox" id="outlineOnOff" onchange="changeOutline(this.checked)">
+            <input type="checkbox" id="outlineOnOff" onchange="toggleOutline(this.checked)">
             <label class="onoff" for="outlineOnOff">
               <span class="onoff-fill"></span>
             </label>
@@ -72,8 +72,15 @@
           </div>
           
           <div class="control">
-            <input type="checkbox" id="offsetOnOff" onchange="changeOffset(this.checked)">
+            <input type="checkbox" id="offsetOnOff" onchange="toggleOffset(this.checked)">
             <label class="onoff" for="offsetOnOff">
+              <span class="onoff-fill"></span>
+            </label>
+          </div>
+          
+          <div class="control">
+            <input type="checkbox" id="blackwhiteOnOff" onchange="toggleColor()">
+            <label class="onoff" for="blackwhiteOnOff">
               <span class="onoff-fill"></span>
             </label>
           </div>

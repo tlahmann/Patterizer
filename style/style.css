@@ -78,7 +78,7 @@ canvas {
 
 .control {
   width: 96%;
-  padding: 2%;
+  padding: 1.5% 2%;
   white-space: nowrap;
 }
 
@@ -199,6 +199,14 @@ canvas {
 
 .control #offsetOnOff + label .onoff-fill:after {
   content: "No Offset";
+}
+
+.control #blackwhiteOnOff + label .onoff-fill:before {
+  content: "White with black";
+}
+
+.control #blackwhiteOnOff + label .onoff-fill:after {
+  content: "Black with white";
 }
 
 .onoffswitch-switch {
